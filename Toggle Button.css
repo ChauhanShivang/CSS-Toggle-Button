@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+}
+
+.container input{
+    display: none;
+}
+
+.toggle{
+    width: 7rem;
+    height: 3rem;
+    background-color: #000;
+    border-radius: 2rem;
+    position: relative;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: .5rem;
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    transition: background-color .5s;
+}
+
+.toggle h1{
+    position: absolute;
+    top: -100%;
+    left: 5%;
+}
+
+.circle{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: .15rem;
+    left: .15rem;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+#check:checked ~ .toggle .circle{
+    left: calc(100% - 45px);
+    background-color: #000;
+}
+
+#check:checked ~ .toggle{
+    background-color: #fff;
+}
+
+.change.container{
+    background-color: #000;
+    color: #fff;
+}
